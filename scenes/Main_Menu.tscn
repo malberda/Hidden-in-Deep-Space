@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtw4n07yjhwr4"]
+
+[ext_resource type="Texture2D" uid="uid://dbl01p2yrv51d" path="res://assets/backgrounds/black.png" id="1_jfien"]
+[ext_resource type="Script" uid="uid://bli7yym8pkeg7" path="res://Scripts/main_menu.gd" id="1_y2rfe"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_y2rfe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -282.0
+offset_top = -174.0
+offset_right = 1416.0
+offset_bottom = 888.0
+texture = ExtResource("1_jfien")
+stretch_mode = 1
+
+[node name="BtnManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1Player" type="Button" parent="BtnManager"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 126.0
+offset_right = 332.0
+offset_bottom = 134.0
+text = "1 Player"
+
+[node name="2Players" type="Button" parent="BtnManager"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 174.0
+offset_right = 402.0
+offset_bottom = 205.0
+text = "2 Players"
+
+[node name="3Players" type="Button" parent="BtnManager"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 226.0
+offset_right = 402.0
+offset_bottom = 257.0
+text = "3 Players"
+
+[connection signal="pressed" from="BtnManager/1Player" to="." method="_on_player_pressed"]
+[connection signal="pressed" from="BtnManager/1Player" to="." method="_on_one_player_pressed"]
+[connection signal="pressed" from="BtnManager/2Players" to="." method="_on_players_pressed"]
+[connection signal="pressed" from="BtnManager/2Players" to="." method="_on_two_players_pressed"]
+[connection signal="pressed" from="BtnManager/3Players" to="." method="_on_players_pressed"]
+[connection signal="pressed" from="BtnManager/3Players" to="." method="_on_three_players_pressed"]

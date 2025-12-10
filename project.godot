@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Hidden in Deep Space"
+run/main_scene="uid://katq1rg5d62v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Hidden in Deep Space"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
